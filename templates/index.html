@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+
+{% block main %}
+<main class="grid w-screen h-screen place-items-center">
+  <div class="flex flex-col gap-2">
+    <img class="w-12 h-12" src="/star.png" alt="star">
+    <h1 class="text-2xl">{{ section.title }}</h1>
+
+    <div class="mb-10">    
+      DEV: <span class="{% if is_dev %} text-green-500 {% else %} text-red-500 {% endif %}">
+        {{ is_dev }}
+      </span>
+    </div>
+
+    {{ section.content | safe }}
+  </div>
+</main>
+{% endblock main %}
