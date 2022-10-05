@@ -1,4 +1,4 @@
-{% set is_dev = get_env(name='DEV') == "true" %}
+{% set is_dev = get_env(name='DEV', default=true) != "false" %}
 
 <!DOCTYPE html>
 <html lang="en">

@@ -6,8 +6,8 @@
     "vite:serve": "vite",
     "zola:build": "zola build",
     "vite:build": "vite build",
-    "start": "cross-env DEV=true npm-run-all --parallel vite:serve zola:serve",
-    "build": "tsc && npm-run-all vite:build zola:build"
+    "start": "npm-run-all --parallel vite:serve zola:serve",
+    "build": "tsc && cross-env DEV=false npm-run-all zola:build vite:build"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
